@@ -1,0 +1,22 @@
+nav {
+	ul{
+		margin: 10px;
+		list-style: none;
+	}
+	li{
+		display: inline-block;
+	}
+	a {
+		text-decoration: none;
+		padding: 10px 10px 10px 15px; 
+		font-size: 1.7em;
+		color: $orange;
+	}
+	a:hover {
+		@include white(.6);
+		color: $white_color;
+		transition: 0.1s ease-in;
+		// transform: scale(1.035);
+		background-color: rgba(226, 136, 18, .9);
+	}
+}

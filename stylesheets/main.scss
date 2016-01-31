@@ -1,0 +1,145 @@
+// ######## Sass Variables ########
+$white_color: #fff;
+$font-stack: Impact, sans-serif;
+$black_color: #000;
+$grey_color: #919191;
+$orange: #e28812;
+
+
+@mixin margin_padding($num) {
+	margin: $num;
+	padding: $num;
+}
+
+@mixin black($opac) {
+	background-color: rgba(0,0,0, $opac); 
+}
+@mixin white($opac) {
+	background-color: rgba(255,255,255, $opac);
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background: transparent;
+	font-family: $font-stack;
+
+}
+
+header {
+	// border-bottom: solid 1px black;
+	// overflow: auto;
+	position: fixed;
+    width: 100%;
+    background: white;
+    opacity: 0;
+    z-index: 999999;
+    box-shadow: 0 0 1px #d6d6d6;
+	h1 {
+	width: 35%;
+	margin: 5px 380px 0 0;
+	font-size: 2.5em;
+	color: $grey_color;
+	float: left;
+	text-align: center;
+	}
+}
+
+@import 'navbar';
+.wrapper {
+	background-color: rgba(255,255,255, .6);
+}
+.parallax-window {
+	height: 100vh;
+    min-height: 400px;
+    width: 100%;
+    background: transparent;
+    h1 {
+    	font-size: 90px;
+    	margin:0;
+    	padding-top: 270px;
+    	text-align: center;
+    	color: #919191;
+    }
+}
+
+.content {
+	width: 100%;
+
+	.content_container {
+		width: 90%;
+		margin: auto;
+		overflow: auto;
+	}
+
+	.c1, .c2, .c3 {
+		@include margin_padding(0);
+		width: 30%;
+		margin: 20px 0 0 30px;
+		float:left;
+		color: $grey_color;
+		font-family: Arial;
+		.headshot {
+			max-width: 200px;
+			float:left;
+		}
+	}
+}
+.secondP {
+	height: 50vh;
+    min-height: 400px;
+    width: 100%;
+    background: transparent;
+}
+
+// ############ Gallery ############
+
+@import 'gallery';
+
+.thirdP {
+	@extend .secondP;
+	height: 30vh;
+}
+
+.contact_me {
+	@include margin_padding(0);
+	width: 100%;
+	h1{
+		color: $grey_color;
+	}
+	.contact_box {
+		width: 30%;
+		padding: 15%;
+		margin: auto;
+	}
+	input {
+		width: 100%;
+		height: 30px;
+		margin: 5px 0 5px 0;
+		border: 2px solid $orange;
+		border-radius: 3px;
+	}
+	textarea {
+		width: 99.5%;
+		height: 150px;
+		margin: 5px 0 5px 0;
+		border-radius: 3px;
+		border: 2px solid $orange;
+		
+	}
+	button {
+		width: 102%;
+    	border-radius: 3px;
+    	background-color: white;
+    	border: 2px solid #e28812;
+    	height: 30px
+	}
+}
+
+
+
+
+
+
+
+ 
